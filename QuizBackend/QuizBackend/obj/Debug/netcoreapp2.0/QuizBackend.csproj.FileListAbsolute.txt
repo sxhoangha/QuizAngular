@@ -1,0 +1,11 @@
+C:\Users\Thang\OneDrive - Centennial College\My Projects\Angular\quiz\QuizBackend\QuizBackend\bin\Debug\netcoreapp2.0\QuizBackend.deps.json
+C:\Users\Thang\OneDrive - Centennial College\My Projects\Angular\quiz\QuizBackend\QuizBackend\bin\Debug\netcoreapp2.0\QuizBackend.runtimeconfig.json
+C:\Users\Thang\OneDrive - Centennial College\My Projects\Angular\quiz\QuizBackend\QuizBackend\bin\Debug\netcoreapp2.0\QuizBackend.runtimeconfig.dev.json
+C:\Users\Thang\OneDrive - Centennial College\My Projects\Angular\quiz\QuizBackend\QuizBackend\bin\Debug\netcoreapp2.0\QuizBackend.dll
+C:\Users\Thang\OneDrive - Centennial College\My Projects\Angular\quiz\QuizBackend\QuizBackend\obj\Debug\netcoreapp2.0\QuizBackend.csprojAssemblyReference.cache
+C:\Users\Thang\OneDrive - Centennial College\My Projects\Angular\quiz\QuizBackend\QuizBackend\obj\Debug\netcoreapp2.0\QuizBackend.csproj.CoreCompileInputs.cache
+C:\Users\Thang\OneDrive - Centennial College\My Projects\Angular\quiz\QuizBackend\QuizBackend\obj\Debug\netcoreapp2.0\QuizBackend.AssemblyInfoInputs.cache
+C:\Users\Thang\OneDrive - Centennial College\My Projects\Angular\quiz\QuizBackend\QuizBackend\obj\Debug\netcoreapp2.0\QuizBackend.AssemblyInfo.cs
+C:\Users\Thang\OneDrive - Centennial College\My Projects\Angular\quiz\QuizBackend\QuizBackend\bin\Debug\netcoreapp2.0\QuizBackend.pdb
+C:\Users\Thang\OneDrive - Centennial College\My Projects\Angular\quiz\QuizBackend\QuizBackend\obj\Debug\netcoreapp2.0\QuizBackend.dll
+C:\Users\Thang\OneDrive - Centennial College\My Projects\Angular\quiz\QuizBackend\QuizBackend\obj\Debug\netcoreapp2.0\QuizBackend.pdb
