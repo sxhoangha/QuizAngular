@@ -1,4 +1,8 @@
 <md-card>
+    <md-card-title>
+        <span *ngIf="question.id">Edit Question</span>
+        <span *ngIf="!question.id">New Question</span>
+    </md-card-title>
     <md-card-content>
         <form>
             <md-form-field class="fullWidth">
@@ -19,6 +23,8 @@
         </form>
     </md-card-content>
     <md-card-actions>
-        <button (click)="post(question)" md-button>POST</button>
+        <button *ngIf="question.id" (click)="null" md-button>EDIT</button>
+        <button *ngIf="question.id" (click)="question = {}" md-button>NEW</button>
+        <button *ngIf="!question.id" (click)="post(question)" md-button>POST</button>
     </md-card-actions>
 </md-card>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using QuizBackend.Models;
 
 namespace QuizBackend.Controllers
@@ -20,19 +21,35 @@ namespace QuizBackend.Controllers
             this.context = context;
         }
 
-        // POST api/values
+       
         [HttpPost]
-        public void Post([FromBody]Question question)
+        public async Task<IActionResult> Post([FromBody]Question question)
         {
             context.Questions.Add(question);
-            context.SaveChanges();
+            await context.SaveChangesAsync();
+            return Ok(question);
         }
 
-        // GET api/values
+        
         [HttpGet]
         public IEnumerable<Question> Get()
         {
             return context.Questions;
+        }
+
+        
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(int id, [FromBody]Question question)
+        {
+            if (id != question.ID)
+            {
+                return BadRequest(); // if id in the url != id of the question
+            }
+            //var existing = await context.Questions.SingleOrDefaultAsync(q => q.ID == id);
+            context.Entry(question).State = EntityState.Modified;  //Entry track the the id of the model, not the id that we pass in 
+            await context.SaveChangesAsync();
+
+            return Ok(question);
         }
     }
 }
