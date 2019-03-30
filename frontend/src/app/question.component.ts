@@ -12,7 +12,8 @@ export class QuestionComponent {
     constructor(private api: ApiService) {}
 
     ngOnInit(){
-        this.api.questionSelected.subscribe(question => this.question = question)
+        this.api.questionSelected.subscribe(question => this.question = question) //subscribe to observable, set 
+                                                                                //question model to the selected one.
     }
 
     post(question) {

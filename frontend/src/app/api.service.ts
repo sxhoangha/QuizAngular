@@ -5,8 +5,8 @@ import { Subject } from 'rxjs/Subject';
 @Injectable()
 export class ApiService {
 
-    private selectedQuestion = new Subject<any>();
-    questionSelected = this.selectedQuestion.asObservable()
+    private selectedQuestion = new Subject<any>(); // create an Subject object 
+    questionSelected = this.selectedQuestion.asObservable() //create Observable
 
     constructor(private http: HttpClient) {}
 
@@ -20,7 +20,13 @@ export class ApiService {
         })
     }
 
-    selectQuestion(question){
+    putQuestion(question){
+        this.http.put(`http://localhost:43257/api/questions/${question.id}`, question).subscribe(res => {
+            console.log(res)
+        })
+    }
+
+    selectQuestion(question){ // whoever subscribe to questionSelected will be notified when a question is selected
         this.selectedQuestion.next(question)
     }
 
