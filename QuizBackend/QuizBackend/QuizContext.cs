@@ -12,5 +12,7 @@ namespace QuizBackend
         public QuizContext(DbContextOptions<QuizContext> options) : base(options) { }
 
         public DbSet<Question> Questions { get; set; }
+
+        public DbSet<QuizBackend.Models.Quiz> Quiz { get; set; }
     }
 }

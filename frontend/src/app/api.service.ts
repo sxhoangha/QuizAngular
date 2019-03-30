@@ -30,4 +30,10 @@ export class ApiService {
         this.selectedQuestion.next(question)
     }
 
+    postQuiz(quiz){
+        this.http.post('http://localhost:43257/api/quizzes', quiz).subscribe(res => {
+            console.log(res)
+        })
+    }
+
 }

@@ -14,7 +14,7 @@ import { NavComponent } from './nav.component';
 import { QuizComponent } from './quiz.component';
 
 
-//define routes for different components
+//define routes for different components  
 const routes = [
   { path: '', component: HomeComponent},
   { path: 'question', component: QuestionComponent},
