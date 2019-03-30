@@ -1,0 +1,21 @@
+<md-card>
+        <md-card-title>
+            <span *ngIf="quiz.id">Edit Quiz</span>
+            <!-- why question.id but not question.ID -->
+            <span *ngIf="!quiz.id">New Quiz</span>
+        </md-card-title>
+        <md-card-content>
+            <form>
+                <md-form-field class="fullWidth">
+                    <input [(ngModel)]="quiz.title" name="title" mdInput placeholder="Quiz Title">
+                </md-form-field>
+              
+            </form>
+        </md-card-content>
+        <md-card-actions>
+            <button *ngIf="quiz.id" (click)="null" md-button>EDIT</button>
+            <button *ngIf="quiz.id" (click)="null" md-button>NEW</button>
+            <!-- set question to empty obj when hit NEW   -->
+            <button *ngIf="!quiz.id" (click)="null" md-button>POST</button>
+        </md-card-actions>
+    </md-card>
