@@ -13,6 +13,9 @@ export class QuizComponent {
     quiz = {}
 
     ngOnInit(){
+        this.api.quizSelected.subscribe(quiz => this.quiz = quiz) 
+        //subscribe to the observable so that everytime a user click
+        //on a quiz on the quiz list, the selectes quiz is assigned to be the model of the component.
         
     }
     

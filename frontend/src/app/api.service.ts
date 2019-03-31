@@ -8,6 +8,9 @@ export class ApiService {
     private selectedQuestion = new Subject<any>(); // create an Subject object 
     questionSelected = this.selectedQuestion.asObservable() //create Observable
 
+    private selectedQuiz = new Subject<any>(); // create an Subject object 
+    quizSelected = this.selectedQuiz.asObservable() //create Observable
+
     constructor(private http: HttpClient) {}
 
     getQuestions(){
@@ -35,5 +38,23 @@ export class ApiService {
             console.log(res)
         })
     }
+
+    //Challenge
+    
+    getQuizzes(){
+        return this.http.get('http://localhost:43257/api/quizzes')
+    }
+
+    putQuiz(quiz){
+        this.http.put(`http://localhost:43257/api/quizzes/${quiz.id}`, quiz).subscribe(res => {
+            console.log(res)
+        })
+    }
+    
+    selectQuiz(quiz){
+        this.selectedQuiz.next(quiz)
+    }
+
+    
 
 }

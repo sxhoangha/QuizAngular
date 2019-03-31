@@ -12,6 +12,7 @@ import { QuestionsComponent } from './questions.component'
 import { HomeComponent } from './home.component';
 import { NavComponent } from './nav.component';
 import { QuizComponent } from './quiz.component';
+import { QuizzesComponent } from './quizzes.component';
 
 
 //define routes for different components  
@@ -29,7 +30,8 @@ const routes = [
     QuestionsComponent, 
     HomeComponent, 
     NavComponent, 
-    QuizComponent
+    QuizComponent,
+    QuizzesComponent
   ],
   imports: [
     BrowserModule, 

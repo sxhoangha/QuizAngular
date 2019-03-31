@@ -19,7 +19,5 @@ export class QuestionsComponent {
         })
     }
 
-    post(question) {
-        this.api.postQuestion(question)
-    }
+    
 }

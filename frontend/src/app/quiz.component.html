@@ -13,8 +13,8 @@
             </form>
         </md-card-content>
         <md-card-actions>
-            <button *ngIf="quiz.id" (click)="null" md-button>EDIT</button>
-            <button *ngIf="quiz.id" (click)="null" md-button>NEW</button>
+            <button *ngIf="quiz.id" (click)="api.putQuiz(quiz)" md-button>EDIT</button>
+            <button *ngIf="quiz.id" (click)="quiz = {}" md-button>NEW</button>
             <!-- set question to empty obj when hit NEW   -->
             <button *ngIf="!quiz.id" (click)="api.postQuiz(quiz)" md-button>POST</button>
         </md-card-actions>

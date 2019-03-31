@@ -16,7 +16,7 @@ export class QuestionComponent {
                                                                                 //question model to the selected one.
     }
 
-    post(question) {
-        this.api.postQuestion(question)
-    }
+    // post(question) {
+    //     this.api.postQuestion(question)
+    // }
 }
