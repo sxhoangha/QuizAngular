@@ -27,6 +27,7 @@
         <button *ngIf="question.id" (click)="api.putQuestion(question)" md-button>EDIT</button>
         <button *ngIf="question.id" (click)="question = {}" md-button>NEW</button>
         <!-- set question to empty obj when hit NEW   -->
-        <button *ngIf="!question.id" (click)="api.postQuestion(question)" md-button>POST</button>
+        <button *ngIf="!question.id" (click)="post(question)" md-button>POST</button>
     </md-card-actions>
 </md-card>
+<questions></questions>

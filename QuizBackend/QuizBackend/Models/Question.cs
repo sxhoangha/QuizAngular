@@ -13,5 +13,9 @@ namespace QuizBackend.Models
         public string Answer1 { get; set; }
         public string Answer2 { get; set; }
         public string Answer3 { get; set; }
+
+        //foreign key to quiz ID
+        public int QuizId { get; set; }
+
     }
 }
