@@ -36,8 +36,14 @@ namespace QuizBackend.Controllers
         {
             return context.Questions;
         }
+        [HttpGet("{quizId}")] //get questions of a particular quiz
+        public IEnumerable<Question> Get([FromRoute] int quizId)
+        {
 
-        
+            return context.Questions.Where(q => q.QuizId == quizId);
+        }
+
+
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, [FromBody]Question question)
         {

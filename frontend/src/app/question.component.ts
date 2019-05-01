@@ -13,7 +13,7 @@ export class QuestionComponent {
     constructor(private api: ApiService, private route: ActivatedRoute) {}
 
     ngOnInit(){
-        this.quizId = this.route.snapshot.paramMap.get('quizId') //get the quizId for the route
+        this.quizId = this.route.snapshot.paramMap.get('quizId') //get the quizId from the route
         
         this.api.questionSelected.subscribe(question => this.question = question) //subscribe to observable, set 
                                                                                 //question model to the selected one.
