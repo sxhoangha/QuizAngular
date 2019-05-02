@@ -25,6 +25,10 @@ namespace QuizBackend.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody]Question question)
         {
+            if (!context.Quiz.Any(q => q.ID == question.QuizId)) //check if there is existing quiz
+            {
+                return NotFound();
+            }
             context.Questions.Add(question);
             await context.SaveChangesAsync();
             return Ok(question);
